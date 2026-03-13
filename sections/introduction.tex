@@ -67,7 +67,7 @@
 \end{frame}
 
 \begin{frame}{BFS Complejidad}
-
+  TODO
 \end{frame}
 
 \begin{frame}{DFS}
@@ -80,7 +80,7 @@
   \inputminted[fontsize=\large,linenos]{cpp}{code/dfs.cpp}
 \end{frame}
 
-\begin{frame}{DBFS Complejidad}
+\begin{frame}{DFS Complejidad}
   TODO
 \end{frame}
 
@@ -102,13 +102,55 @@
 \end{frame}
 
 \begin{frame}{Conexidad}
-  TODO
+  \begin{itemize}
+  \item Una gráfica  es conexa si existe un  camino entre cualesquiera
+    par de vértices.
+  \item Podemos  ver si  una gráfica  es conexa si  nos paramos  en un
+    vértice e intentamos llegar a cualquier nodo.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Conexidad}
+  \begin{center}
+    \includegraphics[scale=0.8]{conexa}
+  \end{center}
 \end{frame}
 
 \begin{frame}{Detección de ciclos}
-  TODO
+  \begin{itemize}
+  \item  Una  gráfica contiene  un  ciclo  si mientras  la  recorremos
+    encontramos un  nodo tal que  un vecino suyo  (que no sea  del que
+    vino) ya había sido visitado.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Detección de ciclos}
+  \begin{center}
+    \includegraphics[scale=0.8]{ciclo}
+  \end{center}  
 \end{frame}
 
 \begin{frame}{¿Es bipartita?}
-  TODO
+  \begin{itemize}
+  \item Una  gráfica es bipartita  si sus nodos pueden  ser coloreados
+    usando dos  colores tales  que ningún  par de  vértices adyacentes
+    tienen el mismo color.
+  \item ¿Cómo?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{¿Es bipartita?}
+  \begin{itemize}
+  \item Elegir dos colores $X$ y $Y$.
+  \item Colorear el nodo inicial de $X$, todos sus vecinos de $Y$, sus
+    vecinos de sus vecinos de $X$, etc.
+  \item Si en algún punto  del recorrido vemos dos vértices adjacentes
+    del mismo color, no es bipartita, en otro caso, sí.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{¿Es bipartita?}
+  \begin{center}
+    \includegraphics[scale=0.75]{bipartite}
+  \end{center}
 \end{frame}
